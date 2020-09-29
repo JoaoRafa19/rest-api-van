@@ -27,7 +27,7 @@ SECRET_KEY = '454dd6a44f8db31149d694ac1d6a978188cb92c10f0a23bf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://teste-api-django.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost','https://teste-api-django.herokuapp.com/']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'rest_api',
 ]
 
@@ -122,5 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/meida/'
 
 django_heroku.settings(locals())
